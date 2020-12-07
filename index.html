@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracalorie | Calories tracker</title>
+    <!-- font icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <style>
+      /* label focus color */
+      .input-field input:focus + label {
+        color: #2196f3 !important;
+      }
+      /* label underline focus color */
+      .input-field input:focus {
+        border-bottom: 1px solid  #2196f3 !important;
+        box-shadow: 0 1px 0 0  #2196f3 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper blue">
+        <div class="container">
+          <a href="#" class="brand-logo center">Tracalorie</a>
+          <ul class="right">
+            <li>
+              <a
+                href="#"
+                class="btn-small blue lighten-1 waves-effect waves-light"
+                id="clear-all-btn"
+                >Clear All</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <div class="container">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-title">Add Meal / Food Item</div>
+          <form class="col">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Add Item" id="item-name" type="text" />
+                <label for="item-name">Meal</label>
+              </div>
+              <div class="input-field col s6">
+                <input
+                  placeholder="Add Calories"
+                  id="item-calories"
+                  type="number" min="0"
+                />
+                <label for="item-calories" class="text-blue">Calories</label>
+              </div>
+
+              <button class="btn blue waves-effect waves-light" id="add-btn">
+                <i class="material-icons left">add</i>Add Meal
+              </button>
+              <button class="btn orange waves-effect waves-light" id="edit-btn">
+                <i class="material-icons left">edit</i>Update meal
+              </button>
+              <button class="btn red waves-effect waves-light" id="delete-btn">
+                <i class="material-icons left">delete</i>Delete Meal
+              </button>
+              <button
+                class="btn grey right waves-effect waves-light"
+                id="back-btn"
+              >
+                <i class="material-icons left">arrow_back</i>Back
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <h3 class="center">Total Calories: <span id="total-calories">0</span></h3>
+      <ul class="collection" id="item-list"></ul>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
