@@ -5,7 +5,7 @@ Web application to store and track calories
 - OOP
 - Local Storage
 - CRUD operations
-- Module pattern
+- Module pattern (IIFE)
   - Local Storage Controller
   - State Controller
   - UI Controller
